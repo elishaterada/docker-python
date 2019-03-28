@@ -6,6 +6,8 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 8 * 1024 * 1024
 
+logging.basicConfig(format='%(message)s', level=logging.DEBUG)
+
 
 @app.route("/status", methods=['GET'])
 def status():
